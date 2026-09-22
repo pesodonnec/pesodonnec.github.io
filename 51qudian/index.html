@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="51区电影 - 深度解析51区（Area 51）神秘历史、外星人传闻及经典科幻电影推荐。探索美国内华达沙漠的军事禁区，了解罗兹威尔事件与UFO文化，提供最全的科幻悬疑片单与观影指南。">
+    <meta name="keywords" content="51区电影,51区,外星人电影,UFO电影,罗兹威尔事件,科幻电影,悬疑电影,51区历史">
+    <title>51区电影-神秘禁区与外星人科幻片深度解析指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #3b82f6;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-padding {
+            padding: 4rem 0;
+        }
+
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            opacity: 1;
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://picsum.photos/seed/area51/1600/900') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #2563eb;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* Section Titles */
+        .section-header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        /* Feature Cards */
+        .feature-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-color);
+        }
+
+        .card-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Film List Style */
+        .film-item {
+            display: flex;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .film-poster {
+            width: 120px;
+            flex-shrink: 0;
+            position: relative;
+        }
+        
+        .film-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .film-info {
+            padding: 1rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .film-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .film-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .film-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        /* History Section */
+        .history-section {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .history-section .section-header h2,
+        .history-section .section-header p {
+            color: white;
+        }
+
+        .history-section p {
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .history-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .history-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .timeline-item {
+            border-left: 2px solid var(--border-color);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            position: absolute;
+            left: -6px;
+            top: 5px;
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.2s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-light);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 0;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                padding: 0 1rem;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: var(--primary-color);
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .grid-2, .grid-3, .grid-4, .history-grid, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .film-item {
+                flex-direction: column;
+            }
+
+            .film-poster {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                </svg>
+                51区<span>电影</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="菜单">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#recommend">精选推荐</a></li>
+                    <li><a href="#history">历史背景</a></li>
+                    <li><a href="#list">片单列表</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>解码51区：神秘禁区与外星人科幻电影指南</h1>
+                <p>探索美国内华达沙漠的军事禁区，从罗兹威尔事件到UFO目击报告，为您精选最扣人心弦的51区主题电影与深度解析。</p>
+                <div>
+                    <a href="#recommend" class="btn">开始探索</a>
+                    <a href="#list" class="btn btn-outline">查看片单</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                    <div>
+                        <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--primary-color);">什么是51区？</h2>
+                        <p style="margin-bottom: 1rem; color: var(--text-light);">51区（Area 51）是美国内华达州林肯县的一处军事基地，也是世界上最著名的机密场所之一。自冷战时期以来，这里一直是美国空军试验基地，并因流传已久的“外星人遗体回收”和“飞碟坠毁”传闻而闻名于世。</p>
+                        <p style="color: var(--text-light);">对于电影爱好者而言，51区不仅仅是现实中的神秘地标，更是科幻与悬疑题材的灵感源泉。本站致力于为您整理最经典的51区题材电影，从硬核军事科幻到惊悚解谜，带您走进这场跨越现实的视觉盛宴。</p>
+                    </div>
+                    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);">
+                        <img src="https://picsum.photos/seed/ufo/600/400" alt="51区神秘区域示意图" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Cards / Categories -->
+        <section id="recommend" class="section-padding" style="background-color: #f1f5f9;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>热门分类推荐</h2>
+                    <p>根据您的兴趣，选择不同类型的51区相关电影</p>
+                </div>
+                <div class="grid feature-grid">
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/scifi/400/250" alt="科幻电影" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">科幻</span>
+                            <h3 class="card-title">硬核科幻</h3>
+                            <p class="card-desc">探讨外星文明、星际战争与未来科技，带你领略宏大的宇宙观。</p>
+                            <a href="#" class="btn" style="font-size: 0.85rem; padding: 0.5rem 1rem;">浏览片单</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/thriller/400/250" alt="悬疑电影" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">悬疑</span>
+                            <h3 class="card-title">秘密阴谋</h3>
+                            <p class="card-desc">揭开政府掩盖的真相，在层层迷雾中寻找被遗忘的真相。</p>
+                            <a href="#" class="btn" style="font-size: 0.85rem; padding: 0.5rem 1rem;">浏览片单</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/history/400/250" alt="历史电影" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">历史</span>
+                            <h3 class="card-title">冷战回忆</h3>
+                            <p class="card-desc">基于真实历史事件改编，还原冷战时期的紧张局势与谍战风云。</p>
+                            <a href="#" class="btn" style="font-size: 0.85rem; padding: 0.5rem 1rem;">浏览片单</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- History & Background -->
+        <section id="history" class="section-padding history-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>51区历史背景</h2>
+                    <p>了解真实历史，才能更好地欣赏相关电影</p>
+                </div>
+                <div class="grid history-grid">
+                    <div class="history-text">
+                        <h3>罗兹威尔事件与传闻起源</h3>
+                        <p>1947年7月发生的“罗兹威尔事件”通常被认为是51区传说诞生的起点。尽管官方最初声称是“飞碟”，但后来改口为“气象气球”，但这依然成为了全球范围内关于外星人存在的最强有力证据。</p>
+                        
+                        <div class="timeline-item">
+                            <span class="timeline-date">1955年</span>
+                            <strong>Project Mogul</strong>
+                            <p>美军秘密启动“Mogul行动”，旨在通过高空气球阵列监听苏联的核试验。这一行动后来被认为是罗兹威尔事件的真相之一。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-date">1955年至今</span>
+                            <strong>UFO目击与解密</strong>
+                            <p>数十年来，无数飞行员和摄影师声称在51区上空目击不明飞行物。随着美国解密档案的增加，51区的神秘面纱逐渐被揭开，成为了流行文化中永恒的主题。</p>
+                        </div>
+                    </div>
+                    <div class="history-visual">
+                        <img src="https://picsum.photos/seed/military/600/500" alt="沙漠军事基地" style="border-radius: 8px; border: 2px solid rgba(255,255,255,0.1);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Film List -->
+        <section id="list" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>经典51区电影推荐</h2>
+                    <p>精选高分影片，重温那些扣人心弦的剧情</p>
+                </div>
+                
+                <article class="film-item">
+                    <div class="film-poster">
+                        <img src="https://picsum.photos/seed/area51film1/200/300" alt="独立日海报">
+                    </div>
+                    <div class="film-info">
+                        <h3 class="film-title">独立日 (Independence Day)</h3>
+                        <div class="film-meta">
+                            <span>1996</span>
+                            <span>科幻 / 动作</span>
+                            <span>8.7/10</span>
+                        </div>
+                        <p class="film-desc">外星舰队突然出现在地球上空，美国总统与一群士兵试图阻止入侵。电影中关于“外星生物被捕获并研究”的情节与51区的传说紧密相连，是该题材的里程碑之作。</p>
+                    </div>
+                </article>
+
+                <article class="film-item">
+                    <div class="film-poster">
+                        <img src="https://picsum.photos/seed/area51film2/200/300" alt="天兆海报">
+                    </div>
+                    <div class="film-info">
+                        <h3 class="film-title">天兆 (Signs)</h3>
+                        <div class="film-meta">
+                            <span>2002</span>
+                            <span>惊悚 / 悬疑</span>
+                            <span>7.6/10</span>
+                        </div>
+                        <p class="film-desc">一位前牧师在家乡发现农田里出现巨大的几何图案，随后发现这些图案预示着外星人的降临。影片充满了对宗教信仰与未知事物的探讨。</p>
+                    </div>
+                </article>
+
+                <article class="film-item">
+                    <div class="film-poster">
+                        <img src="https://picsum.photos/seed/area51film3/200/300" alt="隔离区海报">
+                    </div>
+                    <div class="film-info">
+                        <h3 class="film-title">隔离区 (Area 51)</h3>
+                        <div class="film-meta">
+                            <span>2015</span>
+                            <span>惊悚 / 恐怖</span>
+                            <span>5.8/10</span>
+                        </div>
+                        <p class="film-desc">一群年轻人为了寻找失踪的朋友，潜入传说中戒备森严的51区禁区，试图揭开里面的秘密。影片侧重于在封闭空间内的惊悚体验。</p>
+                    </div>
+                </article>
+
+                <article class="film-item">
+                    <div class="film-poster">
+                        <img src="https://picsum.photos/seed/area51film4/200/300" alt="火星救援海报">
+                    </div>
+                    <div class="film-info">
+                        <h3 class="film-title">火星救援</h3>
+                        <div class="film-meta">
+                            <span>2015</span>
+                            <span>科幻 / 冒险</span>
+                            <span>8.0/10</span>
+                        </div>
+                        <p class="film-desc">虽然背景不是51区，但影片展示了人类在极端环境下的生存智慧。与之类似，许多51区题材电影都强调了“人类与外星文明的首次接触”。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding" style="background-color: #f8fafc;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题 (FAQ)</h2>
+                    <p>关于51区电影与相关知识的解答</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            51区电影通常讲述什么类型的故事？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            51区电影通常围绕“政府阴谋”、“外星人接触”和“军事机密”展开。故事往往涉及主角试图突破封锁，进入禁区寻找真相，或者揭露军方隐藏的外星科技。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            哪一部电影最符合51区的真实传闻？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            虽然电影多为虚构，但《独立日》和《天兆》结合了流行的阴谋论元素，如“外星生物实验”和“政府掩盖真相”，在文化层面上最契合51区的传说。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            有没有关于51区真实历史的电影？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            较为真实的纪录片如《UFO：揭秘》或《Unacknowledged》，以及电影《Project Mogul》相关题材，更多是还原冷战时期的科技背景，而非单纯的动作大片。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 1rem; color: var(--primary-color);">
+                        51区<span>电影</span>
+                    </div>
+                    <p>致力于为科幻电影爱好者提供最全面的51区题材影片推荐、历史背景解析及观影指南。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#recommend">精选推荐</a></li>
+                        <li><a href="#history">历史背景</a></li>
+                        <li><a href="#list">片单列表</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">UFO目击报告</a></li>
+                        <li><a href="#">冷战档案</a></li>
+                        <li><a href="#">科幻小说推荐</a></li>
+                        <li><a href="#">社区讨论</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 51区电影网. 保留所有权利. 本站内容仅供学习交流，不代表官方立场。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navUl = document.querySelector('nav ul');
+
+        menuBtn.addEventListener('click', () => {
+            navUl.classList.toggle('show');
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                navUl.classList.remove('show'); // Close mobile menu if open
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+                                                  </html>
