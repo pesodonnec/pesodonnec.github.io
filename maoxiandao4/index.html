@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="冒险岛4攻略 - 提供最新的冒险岛4版本更新资讯、职业加点指南、装备打造技巧、副本通关攻略及新手入门教程，助你快速提升战力。">
+    <meta name="keywords" content="冒险岛4攻略,冒险岛4,冒险岛,游戏攻略,职业加点,装备推荐,副本攻略">
+    <title>冒险岛4攻略-职业加点、装备打造与副本通关指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f5a623;
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(245, 166, 35, 0.4);
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 166, 35, 0.6);
+        }
+
+        /* Main Content Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 12px;
+            }
+            nav ul {
+                gap: 16px;
+                margin-top: 12px;
+            }
+        }
+
+        /* Content Sections */
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e1e4e8;
+            padding-bottom: 10px;
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .section-header a {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Article Cards */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #ddd;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background-color: #eef4fc;
+            color: var(--primary-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-bottom: 8px;
+            align-self: flex-start;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .widget h3 {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            padding-left: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .guide-list li {
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 8px;
+        }
+
+        .guide-list li:last-child {
+            border-bottom: none;
+        }
+
+        .guide-list a {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+        }
+
+        .guide-list span {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            margin-bottom: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 16px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #fafafa;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 16px;
+            max-height: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            font-size: 0.85rem;
+        }
+
+        /* Specific Styles for Game Content */
+        .stat-bar {
+            height: 8px;
+            background: #eee;
+            border-radius: 4px;
+            margin-top: 4px;
+            overflow: hidden;
+        }
+        .stat-fill {
+            height: 100%;
+            background: var(--primary-color);
+        }
+        .stat-fill.str { background: #e74c3c; }
+        .stat-fill.dex { background: #f1c40f; }
+        .stat-fill.int { background: #9b59b6; }
+        .stat-fill.luk { background: #2ecc71; }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12l5-5m-5 5l5 5"/></svg>
+            <span>冒险岛4攻略</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#guides">新手指南</a></li>
+                <li><a href="#classes">职业加点</a></li>
+                <li><a href="#equipment">装备打造</a></li>
+                <li><a href="#community">玩家社区</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>冒险岛4攻略：从零开始的冒险之旅</h1>
+    <p>无论你是刚刚踏入枫之谷的新手，还是寻求极限战力的老玩家，这里都有你需要的最新资讯、职业解析和实战技巧。</p>
+    <a href="#guides" class="hero-btn">开始阅读攻略</a>
+</section>
+
+<div class="container">
+    <!-- Main Content Area -->
+    <main>
+        <!-- Latest News -->
+        <section id="news">
+            <div class="section-header">
+                <h2>最新资讯</h2>
+                <a href="#">查看更多 &rarr;</a>
+            </div>
+            <div class="article-grid">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/maple1/400/250" alt="版本更新预告" class="card-image">
+                    <div class="card-body">
+                        <span class="card-tag">版本更新</span>
+                        <h3 class="card-title"><a href="#">冒险岛4 2.0版本更新前瞻：新职业“幻影剑士”上线</a></h3>
+                        <p class="card-excerpt">全新职业“幻影剑士”正式加入枫之谷，拥有独特的影分身技能和连招机制，快来了解如何快速上手。</p>
+                        <div class="card-meta">
+                            <span>2023-10-24</span>
+                            <span>1.2w 阅读</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/maple2/400/250" alt="平衡性调整" class="card-image">
+                    <div class="card-body">
+                        <span class="card-tag">平衡调整</span>
+                        <h3 class="card-title"><a href="#">职业平衡性补丁详解：法师系技能伤害提升</a></h3>
+                        <p class="card-excerpt">官方公布了最新的平衡性补丁内容，针对法师系职业的技能倍率进行了全面优化，PVP环境将发生改变。</p>
+                        <div class="card-meta">
+                            <span>2023-10-22</span>
+                            <span>8.5k 阅读</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/maple3/400/250" alt="限时活动" class="card-image">
+                    <div class="card-body">
+                        <span class="card-tag">限时活动</span>
+                        <h3 class="card-title"><a href="#">双倍经验与装备掉落活动开启，速来参与！</a></h3>
+                        <p class="card-excerpt">为了庆祝游戏上线一周年，官方开启了为期一周的狂欢活动，全服玩家经验获取翻倍，稀有装备爆率提升。</p>
+                        <div class="card-meta">
+                            <span>2023-10-20</span>
+                            <span>5.6k 阅读</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Detailed Guides -->
+        <section id="guides">
+            <div class="section-header">
+                <h2>核心攻略</h2>
+                <a href="#">查看更多 &rarr;</a>
+            </div>
+            <div class="article-grid">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/maple4/400/250" alt="新手入门" class="card-image">
+                    <div class="card-body">
+                        <span class="card-tag">新手必读</span>
+                        <h3 class="card-title"><a href="#">冒险岛4新手入门全流程：职业选择与加点建议</a></h3>
+                        <p class="card-excerpt">本指南将详细介绍新手期的任务流程、职业推荐以及前期如何合理分配属性点，助你少走弯路。</p>
+                        <div class="card-meta">
+                            <span>阅读指南</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/maple5/400/250" alt="装备打造" class="card-image">
+                    <div class="card-body">
+                        <span class="card-tag">装备打造</span>
+                        <h3 class="card-title"><a href="#">装备强化与附魔指南：打造毕业神装</a></h3>
+                        <p class="card-excerpt">想要提升战力？掌握装备强化、附魔和镶嵌宝石的技巧是关键。本文提供成功率最高的强化方案。</p>
+                        <div class="card-meta">
+                            <span>打造技巧</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/maple6/400/250" alt="副本攻略" class="card-image">
+                    <div class="card-body">
+                        <span class="card-tag">副本攻略</span>
+                        <h3 class="card-title"><a href="#">黑龙巢穴BOSS打法详解：团队配合是关键</a></h3>
+                        <p class="card-excerpt">黑龙巢穴是当前版本最高难度的副本之一。本文详细解析BOSS的技能机制、仇恨管理及掉落奖励。</p>
+                        <div class="card-meta">
+                            <span>高难副本</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="section-header">
+                <h2>常见问题 (FAQ)</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">冒险岛4支持哪些平台？</div>
+                    <div class="faq-answer">目前游戏支持PC端（Windows）以及主流的移动端设备，实现了跨平台数据互通。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何快速提升等级？</div>
+                    <div class="faq-answer">建议参与主线任务获取经验，同时利用双倍经验卡和组队打怪，关注官方的限时活动。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">装备强化会失败吗？</div>
+                    <div class="faq-answer">是的，装备强化存在失败几率，失败后装备等级会下降。建议使用保护券或选择成功率高的强化方式。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">职业之间有平衡性差异吗？</div>
+                    <div class="faq-answer">游戏会定期进行职业平衡性调整，不同职业在PVE和PVP中的定位有所不同，选择适合自己玩法的职业最重要。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sidebar -->
+    <aside>
+        <!-- Quick Links -->
+        <div class="widget">
+            <h3>热门分类</h3>
+            <ul class="guide-list">
+                <li><a href="#">新手教程 <span>12篇</span></a></li>
+                <li><a href="#">职业技能 <span>8篇</span></a></li>
+                <li><a href="#">装备图鉴 <span>25篇</span></a></li>
+                <li><a href="#">BOSS攻略 <span>6篇</span></a></li>
+                <li><a href="#">经济系统 <span>10篇</span></a></li>
+            </ul>
+        </div>
+
+        <!-- Job Stats Widget -->
+        <div class="widget">
+            <h3>热门职业数据</h3>
+            <div style="margin-bottom: 15px;">
+                <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:4px;">
+                    <span>战士 (狂战士)</span>
+                    <span>95%</span>
+                </div>
+                <div class="stat-bar"><div class="stat-fill str" style="width: 95%;"></div></div>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:4px;">
+                    <span>法师 (伊芙琳)</span>
+                    <span>88%</span>
+                </div>
+                <div class="stat-bar"><div class="stat-fill int" style="width: 88%;"></div></div>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:4px;">
+                    <span>弓箭手 (神射手)</span>
+                    <span>82%</span>
+                </div>
+                <div class="stat-bar"><div class="stat-fill dex" style="width: 82%;"></div></div>
+            </div>
+            <div>
+                <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:4px;">
+                    <span>盗贼 (隐月)</span>
+                    <span>79%</span>
+                </div>
+                <div class="stat-bar"><div class="stat-fill luk" style="width: 79%;"></div></div>
+            </div>
+        </div>
+
+        <!-- Community Notice -->
+        <div class="widget" style="background-color: #eef4fc; border: 1px solid #dcebf7;">
+            <h3 style="border-left-color: #4a90e2; color: #2c3e50;">玩家交流</h3>
+            <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px;">加入我们的官方Discord和QQ群，与其他冒险者交流心得。</p>
+            <button style="width: 100%; padding: 8px; background: #4a90e2; color: white; border: none; border-radius: 4px; cursor: pointer;">加入社区</button>
+        </div>
+    </aside>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>关于冒险岛4攻略</h4>
+            <p style="font-size: 0.9rem;">我们致力于为玩家提供最全面、最及时的冒险岛4游戏攻略、资讯和数据支持，打造玩家信赖的社区平台。</p>
+        </div>
+        <div class="footer-col">
+            <h4>快速链接</h4>
+            <ul>
+                <li><a href="#">游戏官网</a></li>
+                <li><a href="#">玩家论坛</a></li>
+                <li><a href="#">客服中心</a></li>
+                <li><a href="#">隐私政策</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>热门攻略</h4>
+            <ul>
+                <li><a href="#">2023职业排行</a></li>
+                <li><a href="#">最新装备合成公式</a></li>
+                <li><a href="#">全地图宝箱位置</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2023 冒险岛4攻略网. All Rights Reserved. 本站为攻略分享平台，非官方网站。
+    </div>
+</footer>
+
+<script>
+    // FAQ Accordion Logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+  </html>
