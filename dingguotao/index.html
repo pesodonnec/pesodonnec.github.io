@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定国套 - 古法定式拳械图解与实战演练指南</title>
+    <meta name="description" content="定国套 - 专注于古法定式拳械的体系梳理、动作拆解与实战应用。提供定国套图文教程、步法解析、攻防要点及常见误区指导。">
+    <meta name="keywords" content="定国套, 古法定式, 拳械, 武术教学, 传统武术, 攻防技巧">
+    <style>
+        :root {
+            --primary-color: #8B4513; /* 马鞍棕 */
+            --secondary-color: #D2691E; /* 巧克力色 */
+            --bg-color: #FDFBF7; /* 宣纸白 */
+            --text-color: #2C2C2C;
+            --accent-color: #555;
+            --border-color: #E0D0B0;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            border-bottom: 2px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            border: 2px solid var(--primary-color);
+            padding: 0 0.5rem;
+            border-radius: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/wuxia/1600/600');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Content Section */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title span {
+            font-size: 1rem;
+            color: #888;
+            font-weight: normal;
+            border-left: none;
+            padding-left: 0;
+        }
+
+        /* Intro Cards */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .card h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Tutorials List */
+        .tutorial-list {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .tutorial-item {
+            display: flex;
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+        }
+
+        .tutorial-item:last-child {
+            border-bottom: none;
+        }
+
+        .tutorial-thumb {
+            width: 120px;
+            height: 90px;
+            background-color: #ddd;
+            border-radius: 4px;
+            object-fit: cover;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .tutorial-content {
+            flex-grow: 1;
+        }
+
+        .tutorial-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .tutorial-meta {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+        }
+
+        .tutorial-tag {
+            display: inline-block;
+            background-color: #f0f0f0;
+            color: #666;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-widget {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .step-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .step-list li::before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .practice-tips {
+            background-color: #fff8f0;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .practice-tips p {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        details {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+
+        details:last-child {
+            border-bottom: none;
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        details[open] summary::after {
+            content: "-";
+        }
+
+        details p {
+            margin-top: 0.8rem;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 3rem 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .tutorial-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .tutorial-thumb {
+                width: 100%;
+                height: 180px;
+                margin-bottom: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo"><span>定国</span>定国套</div>
+            <button class="mobile-menu-btn" aria-label="菜单">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#theory">拳理基础</a></li>
+                    <li><a href="#tutorials">教程解析</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#about">关于本套</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>定国套：古法定式拳械的实战体系</h1>
+            <p>集站桩定势、发力技巧与攻防实战于一体的传统武术套路线。掌握定国套，不仅是学习一套拳法，更是体悟“定而后能静，静而后能安”的武学智慧。</p>
+            <a href="#tutorials" class="btn">开始研习</a>
+        </section>
+
+        <div class="container">
+            <!-- Left Content -->
+            <div class="content-area">
+                
+                <!-- Introduction -->
+                <section id="theory">
+                    <h2 class="section-title">什么是定国套 <span>The Theory of Dingguo</span></h2>
+                    <div class="intro-grid">
+                        <article class="card">
+                            <div class="card-icon">🛡️</div>
+                            <h3>定势根基</h3>
+                            <p>定国套的核心在于“定”。通过特定的站桩与定势，调整人体重心与骨骼架构，建立稳固的力学基础，为后续发力与闪避提供支撑。</p>
+                        </article>
+                        <article class="card">
+                            <div class="card-icon">⚔️</div>
+                            <h3>攻防合一</h3>
+                            <p>区别于单纯的表演套路，定国套强调每一式动作的实际杀伤力与防御效用，注重实战中的攻防转换与节奏控制。</p>
+                        </article>
+                        <article class="card">
+                            <div class="card-icon">📜</div>
+                            <h3>古法传承</h3>
+                            <p>这套拳法源自清末民初的传统拳种，保留了古法定式的精髓，动作古朴，发力深沉，不花哨但极具穿透力。</p>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Tutorials -->
+                <section id="tutorials">
+                    <h2 class="section-title">核心教程解析 <span>Core Tutorials</span></h2>
+                    <div class="tutorial-list">
+                        <article class="tutorial-item">
+                            <img src="https://picsum.photos/seed/stance/200/150" alt="定势站桩图解" class="tutorial-thumb">
+                            <div class="tutorial-content">
+                                <h3>第一式：起势与三体式定桩</h3>
+                                <div class="tutorial-meta">
+                                    <span class="tutorial-tag">基础</span>
+                                    <span>难度：入门</span>
+                                    <span>阅读时间：5分钟</span>
+                                </div>
+                                <p>讲解定国套的起始动作，重点在于“三体式”的虚实转换，以及如何通过定桩将力量沉入足底，为后续动作蓄势。</p>
+                            </div>
+                        </article>
+                        <article class="tutorial-item">
+                            <img src="https://picsum.photos/seed/move/200/150" alt="步法演练" class="tutorial-thumb">
+                            <div class="tutorial-content">
+                                <h3>第二式：进退步法与缠丝劲</h3>
+                                <div class="tutorial-meta">
+                                    <span class="tutorial-tag">步法</span>
+                                    <span>难度：进阶</span>
+                                    <span>阅读时间：8分钟</span>
+                                </div>
+                                <p>定国套的步法讲究“迈步如猫行”，结合缠丝劲进行横向与纵向的移动，学习如何在移动中保持重心的绝对稳定。</p>
+                            </div>
+                        </article>
+                        <article class="tutorial-item">
+                            <img src="https://picsum.photos/seed/fight/200/150" alt="攻防实战" class="tutorial-thumb">
+                            <div class="tutorial-content">
+                                <h3>第三式：单操与实战拆解</h3>
+                                <div class="tutorial-meta">
+                                    <span class="tutorial-tag">实战</span>
+                                    <span>难度：高阶</span>
+                                    <span>阅读时间：10分钟</span>
+                                </div>
+                                <p>将定国套的招式拆解为单操训练，并模拟实战中的对抗场景，讲解如何利用定势进行格挡与反击。</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- FAQ -->
+                <section id="faq" class="faq-section">
+                    <h2 class="section-title">常见问题解答 <span>FAQ</span></h2>
+                    <details>
+                        <summary>定国套适合初学者学习吗？</summary>
+                        <p>定国套的基础部分非常适合初学者。它的动作结构严谨，强调定势，有助于初学者建立正确的身体力学概念。建议先从“起势与三体式”开始，循序渐进。</p>
+                    </details>
+                    <details>
+                        <summary>练习定国套需要特殊的身体素质吗？</summary>
+                        <p>定国套不追求爆发力，而是追求“整劲”和“支撑八面”。虽然力量大的练习者上手可能稍快，但通过正确的桩功训练，柔弱者也能练出强大的整劲。</p>
+                    </details>
+                    <details>
+                        <summary>这套拳法主要用于实战还是表演？</summary>
+                        <p>定国套原本是实战拳法，但在传承过程中保留了其攻防内涵。目前主要用于武术教学、健身修身以及实战对抗训练，不强调花哨的动作表演。</p>
+                    </details>
+                    <details>
+                        <summary>如何判断自己定势是否标准？</summary>
+                        <p>判断定势是否标准，主要看“四平八稳”：即头顶悬、沉肩坠肘、尾闾中正、足下生根。可以通过照镜子观察身体线条是否平直，或者由老师进行触诊检查。</p>
+                    </details>
+                </section>
+
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside>
+                <div class="sidebar-widget">
+                    <h3>习练步骤</h3>
+                    <ol class="step-list">
+                        <li><strong>站桩：</strong>每日坚持三体式定桩15-20分钟。</li>
+                        <li><strong>单操：</strong>分解练习定国套中的每一个定式动作。</li>
+                        <li><strong>对练：</strong>在掌握单操后，进行双人定式对练。</li>
+                        <li><strong>套路：</strong>将单操串联成完整的定国套路线。</li>
+                    </ol>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>注意事项</h3>
+                    <div class="practice-tips">
+                        <p>❌ <strong>忌浮躁：</strong>定国套讲究静气，心急则意乱。</p>
+                        <p>❌ <strong>忌僵死：</strong>定式不是死站，要有内在的张力。</p>
+                        <p>✅ <strong>忌断连：</strong>动作之间要衔接自然，气不脱。</p>
+                        <p>✅ <strong>忌蛮力：</strong>以意导气，以气催力。</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>相关资源</h3>
+                    <ul>
+                        <li><a href="#">定国套历史考证</a></li>
+                        <li><a href="#">名师演练视频</a></li>
+                        <li><a href="#">拳械器械介绍</a></li>
+                        <li><a href="#">拳理心得分享</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>定国套</h4>
+                <p>弘扬传统武术文化，传承古法定式精髓。致力于为武术爱好者提供科学、系统的习练指导。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">拳理基础</a></li>
+                    <li><a href="#">动作图解</a></li>
+                    <li><a href="#">实战应用</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li>邮箱：contact@dingguotao.cn</li>
+                    <li>电话：010-12345678</li>
+                    <li>地址：武术文化研究基地</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 定国套武术研究中心. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navUl = document.querySelector('nav ul');
+
+        menuBtn.addEventListener('click', () => {
+            navUl.classList.toggle('show');
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    navUl.classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
