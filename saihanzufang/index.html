@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="赛罕租房网 - 呼和浩特市赛罕区最新、最全的房屋出租信息平台。提供小区房源、合租信息、整租房源及房东直租服务，帮助您快速找到理想的居住空间。">
+    <meta name="keywords" content="赛罕租房,呼和浩特租房,赛罕区出租房,呼和浩特房屋出租,赛罕小区房源">
+    <title>赛罕租房-呼和浩特赛罕区最新房屋出租信息平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-dark: #004494;
+            --secondary-color: #f0f4f8;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --accent-color: #ff6b00;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #f9fafb;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: var(--radius);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .btn-outline {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #003366 100%);
+            padding: 60px 0;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-box {
+            background: var(--white);
+            padding: 10px;
+            border-radius: 50px;
+            display: inline-flex;
+            box-shadow: var(--shadow-md);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .search-box select, .search-box input {
+            border: none;
+            outline: none;
+            padding: 12px 20px;
+            font-size: 15px;
+            color: var(--text-main);
+        }
+
+        .search-box select {
+            background: transparent;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .search-box select:first-child {
+            border-right: 1px solid #eee;
+            border-radius: 50px 0 0 50px;
+        }
+
+        .search-box input {
+            flex-grow: 1;
+            background: transparent;
+        }
+
+        .search-box button {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .search-box button:hover {
+            background-color: #e65c00;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--white);
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+        }
+
+        .stat-item p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 40px 0 60px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-main);
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+        }
+
+        .section-more {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .filter-tab {
+            padding: 8px 16px;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .filter-tab.active, .filter-tab:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+
+        /* Property Grid */
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .property-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .property-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-image {
+            height: 180px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 4px 10px;
+            background: rgba(0, 0, 0, 0.6);
+            color: var(--white);
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        .tag.hot {
+            background: #e63946;
+        }
+
+        .tag.new {
+            background: var(--primary-color);
+        }
+
+        .card-content {
+            padding: 16px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+        }
+
+        .price small {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-main);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .meta {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* Feature Section */
+        .features {
+            background: var(--white);
+            padding: 50px 0;
+            margin-top: 40px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 24px;
+        }
+
+        .feature-item h4 {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .feature-item p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            margin-bottom: 15px;
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .faq-question::before {
+            content: 'Q';
+            background: var(--primary-color);
+            color: var(--white);
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 14px;
+            padding-left: 34px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: auto;
+                padding: 15px 0;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .search-box {
+                flex-direction: column;
+                border-radius: 12px;
+                padding: 15px;
+            }
+
+            .search-box select, .search-box input {
+                width: 100%;
+                border-bottom: 1px solid #eee;
+                border-radius: 0;
+                padding: 10px;
+            }
+
+            .search-box select:first-child {
+                border-right: none;
+                border-radius: 0;
+            }
+
+            .search-box button {
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span>赛罕租房</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">小区找房</a>
+                <a href="#">整租</a>
+                <a href="#">合租</a>
+                <a href="#">房东直租</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline">登录</a>
+                <a href="#" class="btn btn-primary">发布房源</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>在赛罕区找到理想的家</h1>
+            <p>汇聚呼和浩特赛罕区最新真实房源，涵盖金地、万达、如意等热门区域，价格透明，看房方便。</p>
+            <form class="search-box" onsubmit="event.preventDefault(); alert('搜索功能演示：请前往具体房源列表页进行筛选');">
+                <select>
+                    <option>区域选择</option>
+                    <option>赛罕区</option>
+                    <option>金地小区</option>
+                    <option>万达广场周边</option>
+                    <option>内蒙古大学</option>
+                    <option>如意开发区</option>
+                </select>
+                <select>
+                    <option>户型选择</option>
+                    <option>一室</option>
+                    <option>两室</option>
+                    <option>三室</option>
+                    <option>四室及以上</option>
+                </select>
+                <select>
+                    <option>价格范围</option>
+                    <option>1000元以下</option>
+                    <option>1000-2000元</option>
+                    <option>2000-3000元</option>
+                    <option>3000元以上</option>
+                </select>
+                <input type="text" placeholder="输入小区名称或地址...">
+                <button type="submit">搜索房源</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>12,580+</h3>
+                    <p>当前在租房源</p>
+                </div>
+                <div class="stat-item">
+                    <h3>8,420</h3>
+                    <p>入驻业主</p>
+                </div>
+                <div class="stat-item">
+                    <h3>15.6万</h3>
+                    <p>累计访问用户</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>好评率</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Section: Recommended -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">热门推荐</h2>
+                    <a href="#" class="section-more">查看全部 &rarr;</a>
+                </div>
+                
+                <div class="filter-tabs">
+                    <div class="filter-tab active">综合排序</div>
+                    <div class="filter-tab">价格从低到高</div>
+                    <div class="filter-tab">价格从高到低</div>
+                    <div class="filter-tab">最新发布</div>
+                    <div class="filter-tab">看房方便</div>
+                </div>
+
+                <div class="property-grid">
+                    <!-- Card 1 -->
+                    <article class="property-card">
+                        <div class="card-image">
+                            <span class="tag hot">急租</span>
+                            <img src="https://picsum.photos/seed/room1/400/300" alt="两室一厅装修">
+                        </div>
+                        <div class="card-content">
+                            <div class="price">2,500<small>元/月</small></div>
+                            <h3 class="title">赛罕区金地国际花园 两室一厅 精装修 家电齐全</h3>
+                            <div class="meta">
+                                <span class="meta-item">2室1厅</span>
+                                <span class="meta-item">65㎡</span>
+                                <span class="meta-item">南北通透</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>房东直租</span>
+                                <span>刚刚</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="property-card">
+                        <div class="card-image">
+                            <span class="tag new">新上架</span>
+                            <img src="https://picsum.photos/seed/room2/400/300" alt="一室一厅">
+                        </div>
+                        <div class="card-content">
+                            <div class="price">1,200<small>元/月</small></div>
+                            <h3 class="title">大学西路附近一居室 简单装修 拎包入住</h3>
+                            <div class="meta">
+                                <span class="meta-item">1室1厅</span>
+                                <span class="meta-item">45㎡</span>
+                                <span class="meta-item">近地铁</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>个人房源</span>
+                                <span>1小时前</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="property-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/room3/400/300" alt="三室一厅">
+                        </div>
+                        <div class="card-content">
+                            <div class="price">3,800<small>元/月</small></div>
+                            <h3 class="title">如意开发区大三居 阳光大客厅 适合家庭居住</h3>
+                            <div class="meta">
+                                <span class="meta-item">3室1厅</span>
+                                <span class="meta-item">95㎡</span>
+                                <span class="meta-item">独立厨卫</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>中介发布</span>
+                                <span>昨天</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="property-card">
+                        <div class="card-image">
+                            <span class="tag hot">热门</span>
+                            <img src="https://picsum.photos/seed/room4/400/300" alt="合租房">
+                        </div>
+                        <div class="card-content">
+                            <div class="price">800<small>元/月</small></div>
+                            <h3 class="title">赛罕区大学城合租 主卧带阳台 隔音好</h3>
+                            <div class="meta">
+                                <span class="meta-item">合租</span>
+                                <span class="meta-item">次卧</span>
+                                <span class="meta-item">近学校</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>个人房源</span>
+                                <span>2天前</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="property-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/room5/400/300" alt="精装公寓">
+                        </div>
+                        <div class="card-content">
+                            <div class="price">2,100<small>元/月</small></div>
+                            <h3 class="title">乌兰察布东路 精品公寓 轻奢风格 独立卫浴</h3>
+                            <div class="meta">
+                                <span class="meta-item">1室1厅</span>
+                                <span class="meta-item">40㎡</span>
+                                <span class="meta-item">拎包入住</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>中介发布</span>
+                                <span>3天前</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="property-card">
+                        <div class="card-image">
+                            <span class="tag new">新上架</span>
+                            <img src="https://picsum.photos/seed/room6/400/300" alt="学区房">
+                        </div>
+                        <div class="card-content">
+                            <div class="price">4,500<small>元/月</small></div>
+                            <h3 class="title">南二环附近学区房 实用两居 环境安静</h3>
+                            <div class="meta">
+                                <span class="meta-item">2室1厅</span>
+                                <span class="meta-item">70㎡</span>
+                                <span class="meta-item">优质学区</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>房东直租</span>
+                                <span>5天前</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="container">
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <h4>真实房源</h4>
+                            <p>严格审核，杜绝虚假信息，房东直租省中介费。</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">💰</div>
+                            <h4>价格透明</h4>
+                            <p>所有租金明码标价，无隐形消费，付款方式安全。</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🚗</div>
+                            <h4>交通便利</h4>
+                            <p>覆盖赛罕区主要交通枢纽，地铁公交一目了然。</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🛡️</div>
+                            <h4>安全保障</h4>
+                            <p>实名认证，在线沟通，交易全程无忧。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <div class="container faq-container">
+                    <div class="section-header" style="justify-content: center;">
+                        <h2 class="section-title">常见问题解答</h2>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">在赛罕区租房需要注意哪些事项？</div>
+                        <div class="faq-answer">建议您优先选择信誉良好的小区，实地看房时检查房屋设施是否完好，确认房东身份及房产证信息，并签署正规的租赁合同以保障权益。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">赛罕区哪个区域租房性价比最高？</div>
+                        <div class="faq-answer">赛罕区政府周边、大学城区域以及如意开发区是热门选择。这些区域生活配套成熟，交通便利，且租金相对适中。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何避免租房被骗？</div>
+                        <div class="faq-answer">不要轻易向陌生人转账汇款，看房时最好结伴而行，通过本站提供的在线客服核实房源真实性，切勿私下交易。</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>赛罕租房</h2>
+                    <p>专注呼和浩特赛罕区本地房屋租赁服务，致力于为租客和房东提供安全、高效、透明的租房体验。让每一个在赛罕生活的人都能找到温暖的家。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">发布房源</a></li>
+                        <li><a href="#">房源筛选</a></li>
+                        <li><a href="#">我的订单</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">租房指南</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">用户协议</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>电话：0471-12345678</li>
+                        <li>邮箱：support@saihan.com</li>
+                        <li>地址：内蒙古自治区呼和浩特市赛罕区</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 赛罕租房网 版权所有. 本网站所有房源信息均由用户发布，仅供参考。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
