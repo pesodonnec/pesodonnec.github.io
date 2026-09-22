@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平行宇宙之恋-穿越时空的极致浪漫与命运交织</title>
+    <meta name="description" content="探索平行宇宙之恋的无限可能，这里有关于多重宇宙、时间悖论与跨时空恋爱的深度解析、精彩故事与科学探讨，带你领略超越维度的爱情美学。">
+    <meta name="keywords" content="平行宇宙之恋, 多重宇宙, 跨时空恋爱, 科幻爱情, 时间悖论, 命运交织">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+            --accent-color: #ff4b1f;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f8f9fa;
+            --bg-card: #ffffff;
+            --border-radius: 12px;
+            --spacing-unit: 20px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .cta-button {
+            padding: 10px 24px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 120px 0 100px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(106, 17, 203, 0.15) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--text-main);
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transform: rotate(-3deg);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-card:hover {
+            transform: rotate(0deg);
+        }
+
+        .hero-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+        }
+
+        /* Section Titles */
+        .section-header {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Core Concepts Grid */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .concept-card {
+            background: var(--bg-card);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .concept-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            border-color: var(--secondary-color);
+        }
+
+        .concept-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(106, 17, 203, 0.1), rgba(37, 117, 252, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--primary-color);
+        }
+
+        .concept-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        .concept-card p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* Featured Stories */
+        .stories-section {
+            background-color: #fff;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .story-card {
+            background: var(--bg-body);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .story-image {
+            height: 240px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .story-tag {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .story-content {
+            padding: 24px;
+        }
+
+        .story-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .story-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .story-excerpt {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .story-link {
+            color: var(--secondary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .story-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Scientific Theory Section */
+        .theory-section {
+            background: linear-gradient(to right, #1a1a2e, #16213e);
+            color: white;
+        }
+
+        .theory-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .theory-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        .theory-content p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .theory-list li {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .theory-list svg {
+            flex-shrink: 0;
+            margin-top: 4px;
+            color: var(--accent-color);
+        }
+
+        .theory-visual {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(255,255,255,0.2);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--secondary-color);
+            border: 2px solid #1a1a2e;
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-bottom: 4px;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--bg-body);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .faq-toggle {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s;
+            fill: var(--text-light);
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .faq-item .faq-answer {
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            background: linear-gradient(90deg, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-brand p {
+            color: #888;
+            max-width: 300px;
+            font-size: 0.9rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #222;
+            padding-top: 30px;
+            text-align: center;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin: 0 auto 32px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .theory-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-brand p {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">UniLove</div>
+            <nav class="nav-links">
+                <a href="#concepts">核心概念</a>
+                <a href="#stories">精选故事</a>
+                <a href="#science">科学理论</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <a href="#stories" class="cta-button">开始探索</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>平行宇宙之恋<br><span>跨越维度的极致浪漫</span></h1>
+                    <p>当现实世界的你爱上另一个时空中的自己，命运将如何改写？探索多重宇宙中的情感羁绊，体验超越时间与空间的宿命交织。</p>
+                    <div class="hero-buttons">
+                        <a href="#stories" class="cta-button">阅读精彩故事</a>
+                        <a href="#science" style="padding: 10px 24px; border: 1px solid var(--text-light); border-radius: 50px; font-weight: 600;">了解科学原理</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-card">
+                        <img src="https://picsum.photos/seed/universe_love/600/400.jpg" alt="平行宇宙之恋概念图" width="600" height="400">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Concepts Section -->
+        <section id="concepts" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>理解平行宇宙之恋</h2>
+                    <p>这不仅仅是一个虚构题材，它触及了量子力学中关于多重宇宙的深刻猜想，以及人类对“可能性”的永恒渴望。</p>
+                </div>
+                <div class="concepts-grid">
+                    <article class="concept-card">
+                        <div class="concept-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        </div>
+                        <h3>多重宇宙假设</h3>
+                        <p>基于量子力学多世界诠释，宇宙并非只有一个，而是存在无数个平行的时空。在每一个宇宙中，都有不同的历史和选择分支。</p>
+                    </article>
+                    <article class="concept-card">
+                        <div class="concept-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </div>
+                        <h3>自我恋与镜像</h3>
+                        <p>最令人心碎也最迷人的设定是爱上另一个时空中的自己。这种镜像般的爱情，既是对自我的审视，也是对完美伴侣的极致幻想。</p>
+                    </article>
+                    <article class="concept-card">
+                        <div class="concept-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <h3>时间悖论与宿命</h3>
+                        <p>为了跨越维度去爱，角色们往往需要面对时间悖论、因果律的破坏以及不可避免的悲剧结局，探讨命运是否真的可以被改写。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Stories Section -->
+        <section id="stories" class="section-padding stories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>精选故事与作品</h2>
+                    <p>从漫画到影视，探索那些关于平行宇宙之恋的动人篇章。</p>
+                </div>
+                <div class="stories-grid">
+                    <article class="story-card">
+                        <div class="story-image">
+                            <span class="story-tag">热门漫画</span>
+                            <img src="https://picsum.photos/seed/manga1/400/300.jpg" alt="漫画封面">
+                        </div>
+                        <div class="story-content">
+                            <div class="story-meta">
+                                <span>作者：未来绘卷</span>
+                                <span>更新中</span>
+                            </div>
+                            <h3 class="story-title">《第25个小时的拥抱》</h3>
+                            <p class="story-excerpt">在每天午夜十二点到凌晨一点之间，主角可以进入一个平行世界。在那里，她遇见了那个从未与她表白过的自己。</p>
+                            <a href="#" class="story-link">阅读更多 &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="story-card">
+                        <div class="story-image">
+                            <span class="story-tag">科幻小说</span>
+                            <img src="https://picsum.photos/seed/novel1/400/300.jpg" alt="小说封面">
+                        </div>
+                        <div class="story-content">
+                            <div class="story-meta">
+                                <span>作者：星际旅人</span>
+                                <span>完结</span>
+                            </div>
+                            <h3 class="story-title">《星河彼岸的我们》</h3>
+                            <p class="story-excerpt">两艘飞船在宇宙尽头相遇，舰长发现对方竟然是自己平行宇宙中的双胞胎恋人，一场跨越光年的重逢就此展开。</p>
+                            <a href="#" class="story-link">阅读更多 &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="story-card">
+                        <div class="story-image">
+                            <span class="story-tag">影视推荐</span>
+                            <img src="https://picsum.photos/seed/movie1/400/300.jpg" alt="电影海报">
+                        </div>
+                        <div class="story-content">
+                            <div class="story-meta">
+                                <span>类型：爱情/科幻</span>
+                                <span>评分 9.2</span>
+                            </div>
+                            <h3 class="story-title">《记忆碎片中的你》</h3>
+                            <p class="story-excerpt">通过记忆提取技术，男主角试图找回失散多年的恋人，却发现她在另一个平行宇宙中过着截然不同的人生。</p>
+                            <a href="#" class="story-link">查看详情 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scientific Theory Section -->
+        <section id="science" class="section-padding theory-section">
+            <div class="container theory-container">
+                <div class="theory-content">
+                    <h2>科学视角下的多重宇宙</h2>
+                    <p>虽然“平行宇宙之恋”目前属于科幻范畴，但量子力学中关于“多世界诠释”的理论为这一浪漫构想提供了坚实的科学地基。</p>
+                    <p>根据量子力学，当粒子进行观测时，宇宙会发生分裂，形成无数个互不干扰的平行分支。这意味着，每一个微小的选择都会导致一个新的宇宙诞生。</p>
+                    <ul class="theory-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><strong>量子分支：</strong>每一次选择都创造了新的历史线。</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><strong>观察者效应：</strong>观测行为本身可能影响宇宙的坍缩与分裂。</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><strong>信息守恒：</strong>即使在平行宇宙中，情感与记忆也是守恒的。</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="theory-visual">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">1927</div>
+                            <div class="timeline-title">海森堡测不准原理提出</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1957</div>
+                            <div class="timeline-title">休·埃弗雷特提出多世界诠释</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1970s</div>
+                            <div class="timeline-title">量子泡沫理论与宇宙微调</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">当代</div>
+                            <div class="timeline-title">平行宇宙题材成为流行文化核心</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item active">
+                        <div class="faq-question">
+                            平行宇宙之恋是真的吗？
+                            <svg class="faq-toggle" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                        </div>
+                        <div class="faq-answer">目前来说，这属于科幻和幻想文学的范畴。虽然量子力学中存在多重宇宙的理论解释，但人类目前尚无法进行跨维度的物理接触或恋爱。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            经典的平行宇宙恋爱作品有哪些？
+                            <svg class="faq-toggle" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                        </div>
+                        <div class="faq-answer">例如《Re:从零开始的异世界生活》、《命运石之门》、《蝴蝶效应》以及电影《降临》等，都探讨了在不同时间线或宇宙中寻找真爱与改变命运的复杂关系。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            为什么人们热衷于这种题材？
+                            <svg class="faq-toggle" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                        </div>
+                        <div class="faq-answer">这种题材满足了人们对“未选择之路”的好奇与遗憾补偿心理。它允许角色（和读者）在另一个完美的平行世界里弥补现实中的遗憾，体验极致的浪漫。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>UniLove</h3>
+                    <p>探索无限可能，在平行宇宙中寻找属于你的那份极致浪漫。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>内容</h4>
+                    <ul>
+                        <li><a href="#">最新故事</a></li>
+                        <li><a href="#">深度解析</a></li>
+                        <li><a href="#">推荐书单</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源</h4>
+                    <ul>
+                        <li><a href="#">漫画连载</a></li>
+                        <li><a href="#">电影推荐</a></li>
+                        <li><a href="#">科幻小说</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于</h4>
+                    <ul>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2023 UniLove Parallel Universe Love. All rights reserved. Designed for exploration.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Accordion Logic
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
